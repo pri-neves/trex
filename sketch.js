@@ -48,7 +48,7 @@ function setup() {
   trex.addAnimation("collided", trex_collided);
   
 
-  trex.scale = 0.5;
+  trex.scale = 0.8;
   
   ground = createSprite(width/2,height-10,width,2);
   ground.addImage("ground",groundImage);
@@ -60,8 +60,8 @@ function setup() {
   restart = createSprite(width/2,height/2);
   restart.addImage(restartImg);
   
-  gameOver.scale = 0.5;
-  restart.scale = 0.5;
+  gameOver.scale = 0.8;
+  restart.scale = 0.8;
   
   invisibleGround = createSprite(width/2,height - 10,width,7);
   invisibleGround.visible = false;
@@ -85,6 +85,7 @@ function draw() {
   background(180);
   
   //exibir pontuação
+  textSize(30);
   text("Pontuação: "+ score, width/2,100);
 
 
@@ -152,6 +153,7 @@ function draw() {
 
      if(mousePressedOver(restart)){
       reset();
+      touches = [];
      }
      
    }
@@ -198,7 +200,7 @@ function spawnObstacles(){
     }
    
     //atribuir escala e tempo de vida ao obstáculo           
-    obstacle.scale = 0.5;
+    obstacle.scale = 0.8;
     obstacle.lifetime = 600;
    
    //acrescentar cada obstáculo ao grupo
@@ -212,7 +214,7 @@ function spawnClouds() {
     var cloud = createSprite(width+20,height-300,40,10);
     cloud.y = Math.round(random(100,200));
     cloud.addImage(cloudImage);
-    cloud.scale = 0.5;
+    cloud.scale = 0.8;
     cloud.velocityX = -3;
     
      //atribuir o tempo de vida da variável
