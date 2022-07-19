@@ -99,7 +99,7 @@ function draw() {
     //pontuação
     score = score + Math.round((frameCount/60)/10);
     
-    if(score>0 && score%100 === 0){
+    if(score>0 && score%1000 === 0){
        checkPointSound.play() 
     }
     
