@@ -86,7 +86,7 @@ function draw() {
   
   //exibir pontuação
   textSize(30);
-  text("Pontuação: "+ score, width/2,100);
+  text("Pontuação: "+ score, 50,100);
 
 
   if(gameState === PLAY){
@@ -178,7 +178,7 @@ function reset(){
 
 function spawnObstacles(){
  if (frameCount % 90 === 0){
-   var obstacle = createSprite(width+20,height-25,20,30);
+   var obstacle = createSprite(width+20,height-35,20,30);
    obstacle.velocityX = -6;
    
     //gerar obstáculos aleatórios
